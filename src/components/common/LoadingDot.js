@@ -16,11 +16,10 @@ class LoadingDot extends React.Component{
   }
 
   componentWillUnmount() {
-    cleanInterval(this.interval);
+    clearInterval(this.interval);
   }
 
   render(){
-    debugger;
     let dots = this.state.frame % (this.props.dots + 1);
     let text = '';
     while (dots > 0){
