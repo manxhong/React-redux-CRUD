@@ -9,6 +9,7 @@ import {Provider} from 'react-redux';
 import  routes from './routes';
 import './styles/styles.css';
 import '../node_modules/bootstrap/dist/css/bootstrap-theme.min.css';
+import '../node_modules/toastr/build/toastr.min.css';
 
 const store = configureStore();
 store.dispatch(loadCourses());
