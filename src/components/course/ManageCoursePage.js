@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 import * as courseActions from '../../actions/courseActions';
 import CourseForm from './CourseForm';
 import toastr from 'toastr';
-import {authorsFormattedForDropdown} from "../../selectors/selectors"
+import {authorsFormattedForDropdown} from "../../selectors/selectors";
 
 export class ManageCoursePage extends React.Component {
     constructor(props, context) {
@@ -29,7 +29,7 @@ export class ManageCoursePage extends React.Component {
 
     updateCourseState(event) {
       const field = event.target.name;
-      let course = this.state.course;
+      let course = Object.assign({}, this.state.course);
       course[field] = event.target.value;
       return this.setState({course: course});
     }

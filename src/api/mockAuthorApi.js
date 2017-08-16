@@ -66,6 +66,7 @@ class AuthorApi {
   }
 
   static deleteAuthor(authorId) {
+    debugger;
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         const indexOfAuthorToDelete = authors.findIndex(author => {
