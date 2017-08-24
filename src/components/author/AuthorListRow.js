@@ -12,7 +12,8 @@ const AuthorListRow = ({author}) =>{
 };
 
 AuthorListRow.propTypes ={
-  author: PropTypes.object.isRequired
+  author: PropTypes.object.isRequired,
+  onDelete: PropTypes.func.isRequired
 };
 
 export default AuthorListRow;

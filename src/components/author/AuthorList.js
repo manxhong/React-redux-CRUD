@@ -1,7 +1,9 @@
 import React, {PropTypes} from 'react';
 import AuthorListRow from'./AuthorListRow';
+import {Link} from 'react-router';
 
 const AuthorList = ({authors})=> {
+
   return (
     <table className="table">
       <thead>
@@ -13,12 +15,17 @@ const AuthorList = ({authors})=> {
       </thead>
       <tbody>
       {authors.map(author =>
-        <AuthorListRow key={author.id} author={author}/>
+        <tr key={author.id}>
+          <td><Link to={'/authors/' + author.id}>Delete</Link></td>
+          <td><Link to={'/author/' + author.id}>{author.id}</Link></td>
+          <td>{author.firstName + " " + author.lastName}</td>
+        </tr>
       )}
       </tbody>
     </table>
   );
 };
+
 
 AuthorList.propTypes = {
   authors: PropTypes.array.isRequired

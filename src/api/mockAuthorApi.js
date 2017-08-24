@@ -58,6 +58,7 @@ class AuthorApi {
           //Cloning so copy returned is passed by value rather than by reference.
           author.id = generateId(author);
           authors.push(author);
+          debugger;
         }
 
         resolve(author);
@@ -66,13 +67,13 @@ class AuthorApi {
   }
 
   static deleteAuthor(authorId) {
-    debugger;
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         const indexOfAuthorToDelete = authors.findIndex(author => {
           author.id == authorId;
         });
         authors.splice(indexOfAuthorToDelete, 1);
+        debugger;
         resolve();
       }, delay);
     });
